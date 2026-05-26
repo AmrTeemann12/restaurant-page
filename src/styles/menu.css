@@ -1,0 +1,3 @@
+.indicator.menu-active {
+    left: calc(5rem + var(--space-3));
+}
