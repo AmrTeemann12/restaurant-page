@@ -11,19 +11,17 @@ function createHome() {
     const container = createContainer();
     const indicator = container.firstChild;
     const header = createElm('div');
-    const divide = createElm('div');
     const main = createElm('div');
 
     indicator.textContent = 'Home';
     indicator.classList.remove('menu-active', 'about-active');
     indicator.classList.add('home-active');
 
-    container.classList.add('home-active');
-
-    (function createHeader(header){
+    (function createHeader(){
         const para = createElm('p');
         const heading = createElm('h1');
         const sub = createElm('span');
+        const divide = createElm('div');
 
         para.classList.add('arabic-text');
         para.textContent = 'اهلاً وسهلاً';
@@ -33,11 +31,13 @@ function createHome() {
         sub.textContent = 'بَيْتُ الْحَمَامُ';
         sub.classList.add('subtitle', 'arabic-text');
 
-        header.append(para, heading, sub)
-        header.classList.add('home-header')
-    })(header)
+        divide.classList.add('divider');
 
-    divide.classList.add('divider');
+        header.append(para, heading, sub, divide)
+        header.classList.add('home-header')
+    })();
+
+    
 
     (function createMain() {
         const wlc = createElm('section');
@@ -130,7 +130,7 @@ function createHome() {
         main.classList.add('home-main');
     })();
 
-    container.append(header, divide, main);
+    container.append(header, main);
 
     content.appendChild(container);
 }

@@ -9,7 +9,7 @@ function createContainer() {
     indicator.classList.add('indicator');
 
     container.appendChild(indicator);
-
+    
     return container;
 }
 

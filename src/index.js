@@ -8,7 +8,7 @@ const pages = {
     home: createHome,
     menu: createMenu,
 }
-let currentPage = 'home'
+let currentPage = 'd'
 
 function switchPage(pageId, button) {
     if(pageId === currentPage) return;
@@ -38,5 +38,5 @@ navBtns.forEach(btn => btn.addEventListener('click', () => {
     switchPage(btn.id, btn);
 }));
 
-createHome();
-document.querySelector('#home').classList.add('active-btn');
+createMenu();
+document.querySelector('#menu').classList.add('active-btn');
