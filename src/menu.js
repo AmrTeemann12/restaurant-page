@@ -163,7 +163,7 @@ function createMenu() {
             borderImage.classList.add('category-border-image');
             sectionImageContainer.classList.add('category-image-container');
             sectionImage.src = section.image;
-            sectionImage.alt = `${section.name} phote`;
+            sectionImage.alt = `${section.nameEn} photo`;
             
             sectionImageContainer.appendChild(sectionImage);
             borderImage.appendChild(sectionImageContainer);
