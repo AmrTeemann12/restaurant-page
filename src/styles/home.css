@@ -20,25 +20,6 @@ h1 {
     margin-top: -15px;
 }
 
-.divider {
-    width: 200px;
-    border: solid 2px var(--clr-secondary);
-    border-radius: 8px;
-    margin: var(--space-3) auto;
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        width: 0;
-        opacity: 0;
-    }
-    to {
-        width: 200px;
-        opacity: 1;
-    }
-}
-
 .wlc-text {
     text-align: center;
     font-size: var(--text-m);
@@ -88,9 +69,7 @@ h1 {
 }
 
 .feature-card {
-    --clr-bg: var(--desert-sand);
-
-    background-color: var(--clr-bg);
+    background-color: var(--clr-tertiary);
     color: var(--clr-text-primary);
 
     border-radius: var(--space-2);
@@ -116,33 +95,6 @@ h1 {
 .feature-card p {
     text-align: center;
     font-weight: var(--fw-normal);
-}
-
-.contact {
-    padding: var(--space-3);
-    margin-bottom: var(--space-4);
-    color: var(--clr-text-primary);
-}
-
-.contact h3 {
-    text-decoration: underline;
-}
-
-.contact-info {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.contact-icon {
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact-info img{
-    width: 150px;
 }
 
 @media only screen and (max-width: 600px) {

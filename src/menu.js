@@ -27,7 +27,7 @@ function createMenu() {
             items: [
                 {nameEn: "Baba Ghanoush", nameAr: "بَابَا غَنُّوج", desc: "Smoky roasted eggplant blended with tahini, garlic & lemon", price: 85},
                 {nameEn: "Hummus Bil Tahini", nameAr: "حُمُّص بِطَحِينَة", desc: "Creamy chickpeas, tahini, lemon, olive oil & sumac", price: 75},
-                {nameEn: "Warak Enab", nameAr: "Warak Enab", desc: "Grape leaves stuffed with rice, herbs & tomatoes", price: 90},
+                {nameEn: "Warak Enab", nameAr: "وَرَق عِنَب", desc: "Grape leaves stuffed with rice, herbs & tomatoes", price: 90},
             ],
         },
         hotMezze: {
@@ -193,7 +193,7 @@ function createMenu() {
                 rowDesc.textContent = item.desc;
                 rowDesc.classList.add('menu-item-desc');
 
-                rowPrice.textContent = item.price;
+                rowPrice.textContent = item.price + ' L.E';
                 rowPrice.classList.add('menu-item-price');
 
                 row.append(rowHead, rowDesc, rowPrice);

@@ -1,12 +1,9 @@
-import {createContainer, createElm, content} from './base.js';
+import {createContainer, createElm, content, appendContact} from './base.js';
 import "./styles/home.css";
 import dishes from "./images/GGI_dishes.png";
 import flavorIcon from "./images/icons/flavors-icon.svg";
 import ingredientsIcon from "./images/icons/ingredients-icon.svg";
 import cozyHomeIcon from "./images/icons/restaurant-icon.svg";
-import mobileIcon from "./images/icons/phone-icon.svg";
-import mailIcon from "./images/icons/mail-icon.svg";
-
 function createHome() {
     const container = createContainer();
     const indicator = container.firstChild;
@@ -43,7 +40,6 @@ function createHome() {
         const wlc = createElm('section');
         const hero = createElm('section');
         const features = createElm('section');
-        const contact = createElm('section');
 
         (function createWlc() {
         const wlcPara = createElm('p');
@@ -98,35 +94,8 @@ function createHome() {
 
         })();
 
-        (function createContact() {
-            const header = createElm('h3');
-            const info = createElm('div');
-            const mobile = createIcon(mobileIcon, 'mobile', '+2012 345 6789');
-            const mail = createIcon(mailIcon, 'mail', 'beitelhamam@rest.com');
-            
-            function createIcon(icon, alt, data){
-                const div = createElm('div');
-                const img = createElm('img');
-                const para = createElm('p');
-
-                img.src = icon;
-                img.alt = alt;
-                para.textContent = data;
-
-                div.append(img, para);
-                div.classList.add('contact-icon');
-                return div;
-            }
-
-            header.textContent = 'Contact us:';
-
-            info.append(mobile, mail);
-            info.classList.add('contact-info');
-
-            contact.append(header, info);
-            contact.classList.add('contact');
-        })();
-        main.append(wlc, hero, features, contact);
+        main.append(wlc, hero, features);
+        appendContact(main);
         main.classList.add('home-main');
     })();
 

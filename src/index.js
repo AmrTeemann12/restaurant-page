@@ -1,14 +1,16 @@
 import {content} from "./base.js";
 import {createHome} from "./home.js";
 import {createMenu} from './menu.js';
+import {createAbout} from "./about.js";
 import "./styles/main.css";
 
 const navBtns = document.querySelectorAll('nav button');
 const pages = {
     home: createHome,
     menu: createMenu,
+    about: createAbout,
 }
-let currentPage = 'd'
+let currentPage = 'home'
 
 function switchPage(pageId, button) {
     if(pageId === currentPage) return;
@@ -38,5 +40,5 @@ navBtns.forEach(btn => btn.addEventListener('click', () => {
     switchPage(btn.id, btn);
 }));
 
-createMenu();
-document.querySelector('#menu').classList.add('active-btn');
+createHome();
+document.querySelector('#home').classList.add('active-btn');

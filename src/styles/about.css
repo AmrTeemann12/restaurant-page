@@ -1,0 +1,125 @@
+.indicator.about-active {
+    left: calc(10rem + calc(var(--space-2)*2));
+}
+
+.heading {
+    padding: var(--space-3) var(--space-2);
+    border-radius: 0 8px 0 0;
+    background-color: var(--clr-bg);
+}
+
+.heading h1 {
+    margin-top: var(--space-3);
+    font-size: var(--text-l);
+    font-weight: var(--fw-bold);
+    color: var(--clr-secondary);
+    text-align: center;
+}
+
+.about-brief {
+    padding: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.about-brief div {
+    padding: var(--space-3);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.about-brief img {
+    flex: 0;
+    width: 150px;
+    aspect-ratio: 1/1;
+}
+
+.brief-story {
+    grid-area: story;
+    background-color: var(--clr-primary);
+}
+
+.brief-message {
+    grid-area: message;
+    background-color: var(--clr-text-secondary);
+}
+
+.brief-history {
+    grid-area: history;
+    background-color: var(--clr-tertiary);
+}
+
+.highlight {
+    font-weight: var(--fw-bold);
+}
+
+.brief-story .highlight {
+    color: var(--clr-bg);
+}
+
+.brief-message .highlight {
+    color: var(--clr-secondary);
+}
+
+.brief-history .highlight {
+    color: var(--clr-primary);
+}
+
+.hamam-highlight {
+    color: var(--clr-text-secondary);
+    font-weight: var(--fw-bold);
+}
+
+.about-hours {
+    padding: var(--space-3);
+    margin-bottom: var(--space-4);
+    color: var(--clr-text-primary);
+}
+
+.about-hours h3 {
+    text-decoration: underline;
+    margin-bottom: var(--space-2);
+}
+
+.hours-list {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.hours-row th,
+.hours-row td {
+    padding: var(--space-2);
+}
+
+.hours-row:nth-child(odd) {
+    background-color: var(--clr-bg-overlay);
+}
+
+.about-footer .attribution {
+    border-radius: 0 0 8px 8px;
+    display: grid;
+    color: var(--clr-bg)
+}
+
+@media only screen and (max-width: 800px) {
+    .brief-story,
+    .brief-history {
+        flex-direction: column-reverse;
+    }
+
+    .brief-message {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .about-brief {
+        padding: var(--space-3);
+        gap: var(--space-3);
+    }
+
+}

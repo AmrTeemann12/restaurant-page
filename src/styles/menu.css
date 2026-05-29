@@ -14,7 +14,7 @@
 }
 
 .category:nth-child(2) .category-header {
-    border-radius: 8px 8px 0 0;
+    border-radius: 0 8px 0 0;
     padding-top: var(--space-5);
 }
 
@@ -112,6 +112,7 @@
     text-align: right;
     font-family: var(--ff-arabic);
     font-weight: var(--fw-normal);
+    max-width: 200px;
 }
 
 .menu-item-desc {

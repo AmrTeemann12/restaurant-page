@@ -1,6 +1,8 @@
 @font-face {
     font-family: 'Khodijah';
-    src: url('../fonts/Khodijah\ Free.ttf') format('trueType');
+    src:url('../fonts/KhodijahFree.woff2') format('woff2'),
+        url('../fonts/KhodijahFree.woff') format('woff'),
+        url('../fonts/Khodijah\ Free.ttf') format('trueType');
     font-weight: normal;
     font-display: swap;
     font-style: normal; 
@@ -8,7 +10,9 @@
 
 @font-face {
     font-family: 'Alaq Baghdad';
-    src: url('../fonts/alfont_com_ALAQ-BAGHDAD.otf') format('openType');
+    src:url('../fonts/ALAQ-BAGHDAD.woff2') format('woff2'),
+        url('../fonts/ALAQ-BAGHDAD.woff') format('woff'),
+        url('../fonts/ALAQ-BAGHDAD.otf') format('openType');
     font-weight: normal;
     font-display: swap;
     font-style: normal;
@@ -16,7 +20,9 @@
 
 @font-face {
     font-family: 'Pharaoh';
-    src: url('../fonts/EgyptianOutline-Regular.ttf') format('trueType');
+    src:url('../fonts/EgyptianOutline-Regular.woff2') format('woff2'),
+        url('../fonts/EgyptianOutline-Regular.woff') format('woff'),
+        url('../fonts/EgyptianOutline-Regular.ttf') format('trueType');
     font-weight: normal;
     font-display: swap;
     font-style: normal;
@@ -61,7 +67,7 @@ button {
     --clr-primary: var(--terracotta);
     --clr-secondary: var(--henna);
     --clr-secondary-overlay: rgba(139, 69, 13, 0.25);
-    --clr-tertiary: var(--midnight-blue);
+    --clr-tertiary: var(--desert-sand);
 
     --space-1: 4px;
     --space-2: 8px;
@@ -217,7 +223,72 @@ box-shadow: 3px 3px 10px 1px rgba(0,0,0,0.44);
     color: var(--clr-primary);
 }
 
-@media only screen and (max-width: 600px) {
+.divider {
+    width: 200px;
+    border: solid 2px var(--clr-secondary);
+    border-radius: 8px;
+    margin: var(--space-3) auto;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 200px;
+        opacity: 1;
+    }
+}
+
+
+.contact {
+    padding: var(--space-3);
+    margin-bottom: var(--space-4);
+    color: var(--clr-text-primary);
+}
+
+.contact h3 {
+    text-decoration: underline;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact-icon {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info img{
+    width: 150px;
+}
+
+footer {
+    margin-top: auto;
+    width: 100%;
+    color: var(--clr-bg);
+}
+
+.attribution {
+    font-size: var(--text-s);
+    padding: var(--space-3);
+    text-align: center;
+    background-color: var(--clr-secondary-overlay);
+}
+
+.attribution a {
+    color: var(--clr-text-secondary);
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 800px) {
     :root {
     --text-base: 1rem;
     --text-m: 1.125rem;
